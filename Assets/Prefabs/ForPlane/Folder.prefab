@@ -199,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 1596631072066000230}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.3, y: 0.6, z: 0.3}
+  m_LocalPosition: {x: 0.3, y: 0.6, z: 0.102}
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -541,8 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3b3f04ac18184468bedd999e5a6688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pokeInteractable: {fileID: 0}
-  _buttonBaseTransform: {fileID: 0}
+  _pokeInteractable: {fileID: 5595580774784890652}
+  _buttonBaseTransform: {fileID: 8847217175476885050}
 --- !u!54 &7388597374526035609
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -861,8 +861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3b3f04ac18184468bedd999e5a6688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pokeInteractable: {fileID: 0}
-  _buttonBaseTransform: {fileID: 0}
+  _pokeInteractable: {fileID: 692992360021531884}
+  _buttonBaseTransform: {fileID: 3078749168755229538}
 --- !u!54 &1464293084010456103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -918,7 +918,7 @@ Transform:
   m_GameObject: {fileID: 2747801594676422982}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.3, y: 0.6, z: 0.3}
+  m_LocalPosition: {x: 0.3, y: 0.6, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1087,8 +1087,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3b3f04ac18184468bedd999e5a6688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pokeInteractable: {fileID: 0}
-  _buttonBaseTransform: {fileID: 0}
+  _pokeInteractable: {fileID: 2219787828717450049}
+  _buttonBaseTransform: {fileID: 2885184127689922929}
 --- !u!54 &452803229302862423
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1564,8 +1564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3b3f04ac18184468bedd999e5a6688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pokeInteractable: {fileID: 0}
-  _buttonBaseTransform: {fileID: 0}
+  _pokeInteractable: {fileID: 7349582572113109653}
+  _buttonBaseTransform: {fileID: 830101484576101718}
 --- !u!54 &58531907034268635
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2229,8 +2229,8 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 0}
+  _pointableElement: {fileID: 5561574029407900381}
+  _rigidbody: {fileID: 8721592299067185082}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
@@ -2961,7 +2961,7 @@ Transform:
   m_GameObject: {fileID: 7656869775975739843}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.3, y: 0.6, z: 0.3}
+  m_LocalPosition: {x: 0.3, y: 0.6, z: -0.101}
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
