@@ -19,6 +19,7 @@
     "io.extendreality.tilia.interactions.controllables.unity": "2.10.28",
     "io.extendreality.tilia.interactions.interactables.unity": "2.17.2",
     "io.extendreality.tilia.sdk.oculusintegration.unity": "2.3.9",
+    "io.extendreality.tilia.visuals.basichand.unity": "2.4.17",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
