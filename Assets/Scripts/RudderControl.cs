@@ -12,7 +12,7 @@ public class RudderControl : MonoBehaviour
     public float maxRotationAngleZ = 30f; // Ángulo máximo de rotación en X
     public float maxRotationAngleY = 30f; // Ángulo máximo de rotación en Y
 
-    private void Update()
+    /*private void Update()
     {
         // Obtener los valores de los controladores
         float zAxisValue = zAxisControl.DriveAxis;
@@ -28,5 +28,5 @@ public class RudderControl : MonoBehaviour
 
         // Aplicar la rotación al timón
         rudderTransform.localRotation = Quaternion.Euler(rotationAngleY, rotationAngleZ, 0);
-    }
+    }*/
 }
