@@ -11,7 +11,7 @@ public class PalancaController : MonoBehaviour
     float velocidadActual=0f;
     float factorVelocidad = 5f;
     // Método para obtener el ángulo actual de la palanca
-    void Update()
+    void FixedUpdate()
     {
         // Obtener el ángulo actual de la palanca
         anguloPalanca = anguloActual;

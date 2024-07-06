@@ -610,6 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def07042e1a2b8740a8550714eb2f1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidadMaxima: 5
   jet: {fileID: 0}
 --- !u!1 &1988427193069720736
 GameObject:
@@ -2270,7 +2271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1889189865117777325, guid: df854889ba8b3b248bf96424a3b89e17, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: midVel
+      value: minVel
       objectReference: {fileID: 0}
     - target: {fileID: 1889189865117777325, guid: df854889ba8b3b248bf96424a3b89e17, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
