@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PalancaController : MonoBehaviour
 {
-    private float velocidadMaxima = 35f;
+    private float velocidadMaxima = 50f;
     public GameObject jet;
     private float anguloActual = 0f; // Ángulo actual de la palanca
     float anguloPalanca;
     float velocidadActual = 0f;
-    float factorVelocidad = 5f;
-    // Método para obtener el ángulo actual de la palanca
+    float factorVelocidad = 1f;
+
     void FixedUpdate()
     {
         // Obtener el ángulo actual de la palanca
@@ -18,7 +18,7 @@ public class PalancaController : MonoBehaviour
         // Calcular la velocidad en función del ángulo de la palanca
         if (anguloPalanca == 0)
         {
-            velocidadActual += -0.5f * factorVelocidad;
+            velocidadActual += -0.2f * factorVelocidad;
         }
         else
         {
