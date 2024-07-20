@@ -23,8 +23,8 @@ public class audiofunc : MonoBehaviour
         m_Play= true;
         m_ToggleChange = true;
 
-        // 1 debería ser el max de duración de todos tus audios
-        float time = Random.Range(4, 10);
+        // 1 deberï¿½a ser el max de duraciï¿½n de todos tus audios
+        float time = Random.Range(50, 100);
         Invoke("playAudio", time);
     }
 
@@ -40,21 +40,7 @@ public class audiofunc : MonoBehaviour
         //}
         //m_Play = true;
 
-        float time = Random.Range(4, 10);
+        float time = Random.Range(50, 100);
         Invoke("playAudio", time);
     }
-
-    /*
-    void OnGUI()
-    {
-        //Switch this toggle to activate and deactivate the parent GameObject
-        m_Play = GUI.Toggle(new Rect(10, 10, 100, 30), m_Play, "Play Music");
-
-        //Detect if there is a change with the toggle
-        if (GUI.changed)
-        {
-            //Change to true to show that there was just a change in the toggle state
-            m_ToggleChange = true;
-        }
-    }*/
 }
