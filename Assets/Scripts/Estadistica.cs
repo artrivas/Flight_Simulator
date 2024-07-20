@@ -9,8 +9,8 @@ public class Estadistica : MonoBehaviour
     public TextMeshProUGUI messageText; 
     public float valueToCheck; 
 
-    public string objectAName ; // Nombre del objeto A en la escena
-    public string objectBName ; // Nombre del objeto B en la escena
+    public GameObject objectAName ; // Nombre del objeto A en la escena
+    public GameObject objectBName ; // Nombre del objeto B en la escena
 
     private float startTime;
     private bool canvasActivated = false;
@@ -26,16 +26,20 @@ public class Estadistica : MonoBehaviour
         // Verifica si el valor es igual a 0
         if (valueToCheck == 0 && !canvasActivated)
         {
+            Debug.Log("Verifica desactivado");
             // Verifica si la colisión es con el objeto A o B
-            if (collision.gameObject.name == objectAName || collision.gameObject.name == objectBName)
+            if (collision.gameObject == objectAName || collision.gameObject == objectBName)
             {
-                StartCoroutine(ActivateCanvasWithDelay(collision.gameObject.name));
+                Debug.Log("Verifica collision");
+                // Inicia la corrutina para activar el canvas con un retraso
+                StartCoroutine(ActivateCanvasWithDelay(collision.gameObject));
             }
         }
     }
 
-    private IEnumerator ActivateCanvasWithDelay(string collidedObjectName)
+    private IEnumerator ActivateCanvasWithDelay(GameObject collidedObject)
     {
+        Debug.Log("entra collision");
         // Espera 5 segundos
         yield return new WaitForSeconds(5);
 
@@ -43,7 +47,7 @@ public class Estadistica : MonoBehaviour
         if (!canvasToActivate.activeSelf)
         {
             canvasToActivate.SetActive(true);
-            canvasActivated = true;
+            canvasActivated = true; // Marca el canvas como activado
 
             // Calcula el tiempo transcurrido
             float elapsedTime = Time.time - startTime;
@@ -55,11 +59,11 @@ public class Estadistica : MonoBehaviour
             string formattedTime = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, seconds);
 
             // Determina el mensaje según el objeto con el que se colisiona
-            if (collidedObjectName == objectAName)
+            if (collidedObject == objectAName)
             {
                 messageText.text = "¡Felicidades! Tiempo transcurrido: " + formattedTime;
             }
-            else if (collidedObjectName == objectBName)
+            else if (collidedObject == objectBName)
             {
                 messageText.text = "¡Buen intento! Tiempo transcurrido: " + formattedTime;
             }
