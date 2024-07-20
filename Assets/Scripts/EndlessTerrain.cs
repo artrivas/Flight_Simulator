@@ -21,6 +21,17 @@ public class EndlessTerrain : MonoBehaviour {
 	int chunkSize;
 	int chunksVisibleInViewDst;
 
+	int[] notAllowedViewMinX = {0,20,34,0};
+	int[] notAllowedViewMaxX = {7,27,41,7};
+	int[] notAllowedViewMinY = {0, 0,27,34};
+	int[] notAllowedViewMaxY = {7, 7, 34,41};
+
+	/*
+	int[] notAllowedViewMinX = {0,27,41,7};
+	int[] notAllowedViewMaxX = {7,34,48,14};
+	int[] notAllowedViewMinY = {0, 0, 0,0};
+	int[] notAllowedViewMaxY = {7, 7, 7,7};
+	*/
 	Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
 	static List<TerrainChunk> visibleTerrainChunks = new List<TerrainChunk>();
 
@@ -62,6 +73,17 @@ public class EndlessTerrain : MonoBehaviour {
 		for (int yOffset = -chunksVisibleInViewDst; yOffset <= chunksVisibleInViewDst; yOffset++) {
 			for (int xOffset = -chunksVisibleInViewDst; xOffset <= chunksVisibleInViewDst; xOffset++) {
 				Vector2 viewedChunkCoord = new Vector2 (currentChunkCoordX + xOffset, currentChunkCoordY + yOffset);
+				bool valid = true;
+				for(int pitr = 0; pitr < notAllowedViewMaxX.Length;pitr++){
+					if(notAllowedViewMinX[pitr] <= viewedChunkCoord.x  && viewedChunkCoord.x <= notAllowedViewMaxX[pitr] && notAllowedViewMinY[pitr] <= viewedChunkCoord.y && viewedChunkCoord.y <= notAllowedViewMaxY[pitr]){
+						valid = false;
+					}
+				}
+				//Debug.Log(viewedChunkCoord.x);
+				Debug.Log(viewedChunkCoord.y);
+				if(!valid){
+					continue;
+				}
 				if (!alreadyUpdatedChunkCoords.Contains (viewedChunkCoord)) {
 					if (terrainChunkDictionary.ContainsKey (viewedChunkCoord)) {
 						terrainChunkDictionary [viewedChunkCoord].UpdateTerrainChunk ();
